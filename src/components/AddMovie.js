@@ -6,6 +6,7 @@ function AddMovie(props) {
 	const titleRef = useRef("")
 	const openingTextRef = useRef("")
 	const releaseDateRef = useRef("")
+	const formRef = useRef()
 
 	function submitHandler(event) {
 		event.preventDefault()
@@ -19,10 +20,12 @@ function AddMovie(props) {
 		}
 
 		props.onAddMovie(movie)
+
+		formRef.current.reset()
 	}
 
 	return (
-		<form onSubmit={submitHandler}>
+		<form ref={formRef} onSubmit={submitHandler}>
 			<div className={classes.control}>
 				<label htmlFor="title">Title</label>
 				<input type="text" id="title" ref={titleRef} />
