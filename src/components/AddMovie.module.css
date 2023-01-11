@@ -16,8 +16,12 @@
 	font: inherit;
 	padding: 0.5rem;
 	border-radius: 10px;
-	border: 1px solid #ccc;
-	background-color: #f7f7f7;
+	border: 2px solid #ccc;
+	background-color: rgb(255, 230, 230);
+}
+
+::placeholder {
+	color: red;
 }
 
 .control input:focus,

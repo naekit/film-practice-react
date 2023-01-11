@@ -10,18 +10,25 @@ function AddMovie(props) {
 
 	function submitHandler(event) {
 		event.preventDefault()
-
-		// could add validation here...
-
-		const movie = {
-			title: titleRef.current.value,
-			openingText: openingTextRef.current.value,
-			releaseDate: releaseDateRef.current.value,
+		// validation
+		if (!titleRef.current.value) {
+			titleRef.current.placeholder = "Please fill in title"
+			return
+		} else if (!openingTextRef.current.value) {
+			openingTextRef.current.placeholder = "Please fill in opening text"
+			return
+		} else if (!releaseDateRef.current.value) {
+			releaseDateRef.current.placeholder = "Please fill in release date"
+			return
+		} else {
+			const movie = {
+				title: titleRef.current.value,
+				openingText: openingTextRef.current.value,
+				releaseDate: releaseDateRef.current.value,
+			}
+			props.onAddMovie(movie)
+			formRef.current.reset()
 		}
-
-		props.onAddMovie(movie)
-
-		formRef.current.reset()
 	}
 
 	return (
