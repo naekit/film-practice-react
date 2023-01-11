@@ -1,29 +1,31 @@
 section {
-  margin: 1rem auto;
-  width: 90%;
-  max-width: 40rem;
-  text-align: center;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
+	margin: 1rem auto;
+	width: 90%;
+	max-width: 40rem;
+	text-align: center;
+	background-color: rgb(248, 197, 197);
+	padding: 2rem;
+	border-radius: 12px;
 }
 
 button {
-  font: inherit;
-  cursor: pointer;
-  background: #230052;
-  border: 1px solid #230052;
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 20px;
+	font: inherit;
+	font-weight: bold;
+	cursor: pointer;
+	background: #10061d;
+	border: 1px solid #230052;
+	color: #dbdbdb;
+	padding: 0.75rem 2rem;
+	border-radius: 10px;
 }
 
 button:focus {
-  outline: none;
+	outline: none;
 }
 
 button:hover,
 button:active {
-  background-color: #460897;
-  border-color: #460897;
+	background-color: #f11a1a4d;
+	color: #10061d;
+	border: #10061d 1px solid;
 }
